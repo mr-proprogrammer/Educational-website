@@ -1,0 +1,261 @@
+/* About Page Coding starts here */
+
+/* @@@@@@@@@@@@@@@ Achievements section @@@@@@@@@@@@@@ */
+
+.achievements {
+  padding-top: 10rem;
+  position: relative;
+}
+
+.achievement-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+}
+
+.achievement__image img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.achievement {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.achievement__content h1 {
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.achievement__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.achievement__stats h3 {
+  margin-bottom: 0;
+}
+
+.achievement__stats i {
+  font-size: var(--fs-h4);
+  color: var(--clr-light);
+  display: inline-block;
+}
+
+.achievement__stats .achivement__1 i {
+  background: #f75842;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.achievement__stats .achivement__2 i {
+  background: #00bf8e;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+.achievement__stats .achivement__3 i {
+  background: #6c63ff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.achievement__stats .achivement__1,
+.achievement__stats .achivement__2,
+.achievement__stats .achivement__3 {
+  background: var(--bg-1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-1);
+  border-radius: 2rem;
+  transition: all 0.6s ease-in-out;
+}
+
+.achievement__stats .achivement__1:hover,
+.achievement__stats .achivement__2:hover,
+.achievement__stats .achivement__3:hover {
+  box-shadow: 5px 20px 15px rgba(0, 0, 0, 0.35);
+  background: var(--bg-2);
+}
+
+/* ^ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+^           Team section 
+
+^@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+.team {
+  margin-top: 6rem;
+  margin-bottom: 5rem;
+  box-shadow: inset 0 0 48px rgba(0, 0, 0, 0.5);
+  background: var(--bg-1);
+}
+
+.team h2.h2 {
+  text-align: center;
+  padding: 7rem 0 3rem 0;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  background: var(--bg-2);
+  padding: 2rem;
+  /* box-shadow: ; */
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid transparent;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+
+.card:hover {
+  border-color: var(--bg-primary);
+  background: transparent;
+}
+
+.card__image img {
+  border-radius: 1rem;
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  filter: saturate(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.card:hover .card__image img {
+  filter: saturate(1);
+}
+.card__info {
+  text-align: center;
+  padding: 1rem 0 0 0;
+}
+
+.card__info h4,
+.card__info p {
+  margin-bottom: 0;
+}
+
+.card__socials {
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(100%, -50%);
+  padding: 1.5rem;
+  gap: 1rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover .card__socials {
+  transform: translate(8px, -50%);
+}
+
+/* !@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Media Queries @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+ * Media Queries for Medium devices 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  /*^ @@@@@@@@@@@ Achievement section @@@@@@@@@@@@ */
+
+  section.achievements {
+    padding-top: 7rem;
+  }
+  .achievement-container {
+    grid-template-columns: 1fr;
+    height: fit-content;
+  }
+
+  .achievement__image img {
+    max-width: 60%;
+    margin: auto;
+  }
+
+  /*^ @@@@@@@@@@@@@@ Team section start here @@@@@@@@@@@ */
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+ * Media Queries for small devices 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+@media (max-width: 768px) and (min-width: 601px) {
+  /*^ @@@@@@@@@@@ Achievement section @@@@@@@@@@@@ */
+
+  section.achievements {
+    padding-top: 7rem;
+  }
+  .achievement-container {
+    grid-template-columns: 1fr;
+    height: fit-content;
+  }
+
+  .achievement__image img {
+    max-width: 60%;
+    margin: auto;
+  }
+
+  /*^ @@@@@@@@@@@@@@ Team section start here @@@@@@@@@@@ */
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+ * Media Queries for x-small devices 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+@media (max-width: 600px) {
+  /*^ @@@@@@@@@@@ Achievement section @@@@@@@@@@@@ */
+
+  section.achievements {
+    padding-top: 7rem;
+  }
+  .achievement-container {
+    grid-template-columns: 1fr;
+    height: fit-content;
+  }
+
+  .achievement__image img {
+    max-width: 60%;
+    margin: auto;
+  }
+
+  .achievement__stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /*^ @@@@@@@@@@@@@@ categories section start here @@@@@@@@@@@ */
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,204 @@
+.header {
+  height: 0;
+}
+
+.contact {
+  padding-top: 14rem;
+  padding-bottom: 9rem;
+}
+
+.contact-container {
+  background: var(--bg-1);
+  border-radius: 1rem;
+  padding: 5rem;
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: 1fr 2fr;
+  height: 47rem;
+}
+
+.contact__banner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  background: var(--bg-primary);
+  padding: 3rem;
+  border-radius: 2rem;
+  margin-top: -8rem;
+}
+
+.contact__image {
+  width: 12rem;
+  justify-self: center;
+}
+
+.contact__image img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.contact__phone,
+.contact__mail,
+.contact__location {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact__icon {
+  background: #fff;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: grid;
+  gap: 3rem;
+  align-self: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact__icon i {
+  margin: auto;
+  font-size: 1.3rem;
+}
+
+.contact__icon:hover {
+  background: var(--bg);
+}
+.contact__icon:hover i {
+  color: var(--clr-light);
+}
+
+.contact__icon ~ div {
+  margin-top: 1rem;
+  color: var(--bg-1);
+}
+
+.contact__socials {
+  display: flex;
+  gap: 2rem;
+}
+
+.contact__socials div {
+  background: var(--bg);
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: grid;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact__socials div:hover {
+  background: transparent;
+}
+.contact__socials div a {
+  margin: auto;
+  font-size: 1.3rem;
+}
+
+/* ###################### contact form ############ */
+
+.contact__form form {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+}
+.form__top {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+}
+.contact__form form .btn {
+  width: fit-content;
+}
+.contact__form input,
+.contact__form textarea {
+  display: inline-block;
+  padding: 2rem;
+  width: 100%;
+  font-size: 1.6rem;
+  background: var(--bg);
+  color: #fff;
+  border: 1px solid transparent;
+  /* outline: none; */
+}
+
+.contact__form textarea {
+  height: 15rem;
+  font-size: 1.4rem;
+}
+
+.contact__form input:focus,
+.contact__form textarea:focus {
+  border-color: #fff;
+}
+
+.contact__form input {
+  height: 6rem;
+  /* margin-bottom: 1.5rem; */
+}
+
+/* !@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Media Queries @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+ * Media Queries for Medium devices 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+@media (max-width: 1024px) and (min-width: 601px) {
+  /*^ @@@@@@@@@@@ container section @@@@@@@@@@@@ */
+
+  .contact {
+    padding-top: 10rem;
+  }
+  .contact-container {
+    padding: 2rem;
+    gap: 2rem;
+    height: fit-content;
+  }
+  /*^ @@@@@@@@@@@@@@ contact banner @@@@@@@@@@@ */
+
+  .contact__banner {
+    padding: 3rem 1rem;
+    border-radius: 1.5rem;
+    margin-top: 0;
+  }
+
+  /*^ @@@@@@@@@@@@@@ contact form @@@@@@@@@@@ */
+
+  .contact__form textarea {
+    height: 25rem;
+  }
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+ * Media Queries for x-small devices 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+@media (max-width: 600px) {
+  /*^ @@@@@@@@@@@ container section @@@@@@@@@@@@ */
+
+  .contact {
+    padding-top: 10rem;
+  }
+  .contact-container {
+    padding: 2rem;
+    gap: 2rem;
+    height: fit-content;
+    grid-template-columns: 1fr;
+  }
+  /*^ @@@@@@@@@@@@@@ contact banner @@@@@@@@@@@ */
+
+  .contact__banner {
+    padding: 3rem 1rem;
+    border-radius: 1.5rem;
+    margin-top: 0;
+  }
+
+  /*^ @@@@@@@@@@@@@@ contact form @@@@@@@@@@@ */
+
+  .contact__form textarea {
+    height: 25rem;
+  }
+}

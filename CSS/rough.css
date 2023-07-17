@@ -1,0 +1,86 @@
+
+
+
+
+/* .faq-section {
+    background: var(--bg-1);
+    box-shadow: inset 0 0 48px rgba(0, 0, 0, 0.5);
+    margin-bottom: 17rem;
+}
+
+.faq-section h2.h2 {
+    text-align: center;
+    padding-top: 7rem;
+}
+
+.faq__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(395px, 1fr));
+    gap: 2rem;
+    padding: 5rem 0;
+}
+
+.faq {
+    border: 2px solid red;
+}
+
+.faq__content {
+    position: relative;
+    display: flex;
+    gap: 5rem;
+}
+
+.faq__info {
+    padding: 3rem 8rem;
+    height: 100px;
+}
+.faq__content input[type = 'checkbox'] {
+    position: absolute;
+    top: 13%;
+    left: 5%;
+    display: block;
+    height: 25px;
+    width: 30px;
+    z-index: 999;
+    opacity: 0;
+}
+
+.faq__info p{
+    transform: translatey(-200%);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.faq__lines {
+    position: absolute;
+    height: 25px;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 16%;
+    left: 5%;
+}
+
+.faq__lines .line {
+    display: block;
+    height: 4px;
+    width: 90%;
+    background: #fff;
+}
+
+.faq__lines .line2{
+    rotate: 90deg;
+    position: absolute;
+}
+
+
+.faq__content input[type = 'checkbox']:checked ~ .faq__info p{
+    transform: translate(0);
+    opacity: 1;
+}
+
+.faq__content input[type = 'checkbox']:checked ~ .faq__info{
+    height: fit-content;
+}
+ */
